@@ -1,5 +1,17 @@
-function firstUncompletedNote(notes) {
-  // ...
+function firstUncompletedNote(lista) {
+
+  for(y in lista) {
+    for (x in lista[y]) {
+      for (z in lista[y].todos) { 
+        if (z != true) {
+          break 
+        }
+        
+      }
+    }    
+    
+  }
+  return y
 }
 
 const notes = [
@@ -73,6 +85,8 @@ const notes = [
   }
 ]
 
+
 const noteInProgress = firstUncompletedNote(notes);
+
 console.log('All notes: ', notes);
 console.log('First note in progress: ', noteInProgress);
